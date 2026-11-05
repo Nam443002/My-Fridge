@@ -1,0 +1,9 @@
+﻿-- V3__seed_recipes_nutrition.sql
+-- Seed: ingredient_nutritions (kcal, protein, fat, carbs, fiber, sodium per 100g)
+-- Seed: 5 Vietnamese recipes
+--   1. Thịt bò xào bông cải xanh
+--   2. Thịt ba chỉ kho trứng
+--   3. Ức gà áp chảo nấm
+--   4. Đậu phụ sốt cà chua
+--   5. Canh rau muống nấu tôm
+-- Each recipe includes: recipe_ingredients (scaling_type, importance), recipe_steps

@@ -1,0 +1,5 @@
+﻿-- V2__seed_ingredients_shelf_life.sql
+-- Seed: 9 standard units, 6 allergen_groups
+-- Seed: 23 Vietnamese ingredients with allergen mapping
+-- Seed: Regional aliases (Miền Bắc / Nam / Trung / Tây) — embedding column left NULL for FastAPI fill
+-- Seed: shelf_life_days per ingredient × storage_location (PANTRY, FRIDGE, FREEZER)

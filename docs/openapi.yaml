@@ -1,0 +1,34 @@
+﻿openapi: 3.0.3
+info:
+  title: SmartMeal AI API
+  description: >
+    SmartMeal AI (my-fridge) — batch-based ingredient management,
+    FEFO expiry alerting, multi-criteria BMI/family recipe recommendations.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: NestJS Backend (dev)
+paths:
+  /healthz:
+    get:
+      summary: Liveness / readiness healthcheck
+      responses:
+        "200":
+          description: OK
+components:
+  schemas:
+    ApiResponse:
+      type: object
+      required: [success, traceId, timestamp]
+      properties:
+        success: { type: boolean }
+        data: { nullable: true }
+        error: { $ref: "#/components/schemas/ApiError" }
+        traceId: { type: string }
+        timestamp: { type: string, format: date-time }
+    ApiError:
+      type: object
+      nullable: true
+      properties:
+        code: { type: string }
+        message: { type: string }

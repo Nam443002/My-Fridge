@@ -1,0 +1,35 @@
+﻿version: "3.8"
+
+# ─────────────────────────────────────────────────────────
+# Development Overrides — expose internal ports to host
+# ─────────────────────────────────────────────────────────
+services:
+  postgres:
+    ports: ["${DB_PORT:-5432}:5432"]
+
+  redis:
+    ports: ["${REDIS_PORT:-6379}:6379"]
+
+  minio:
+    ports:
+      - "${MINIO_PORT:-9000}:9000"
+      - "${MINIO_CONSOLE_PORT:-9001}:9001"
+
+  ai-service:
+    ports: ["${AI_SERVICE_PORT:-8000}:8000"]
+    volumes:
+      - ./ai-service-fastapi/app:/app/app:ro
+      - ./ml/weights:/app/weights:ro
+    environment:
+      LOG_LEVEL: "DEBUG"
+
+  backend:
+    ports: ["${SERVER_PORT:-3000}:3000"]
+    environment:
+      NODE_ENV: development
+      LOG_LEVEL: debug
+
+  nginx:
+    ports:
+      - "${NGINX_HTTP_PORT:-80}:80"
+      - "${NGINX_HTTPS_PORT:-443}:443"

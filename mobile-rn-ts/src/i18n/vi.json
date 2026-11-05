@@ -1,0 +1,4 @@
+﻿{
+  "common": { "appName": "SmartMeal AI" },
+  "auth": { "login": "Đăng nhập", "logout": "Đăng xuất" }
+}

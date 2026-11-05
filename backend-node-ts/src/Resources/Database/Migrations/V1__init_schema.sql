@@ -1,0 +1,11 @@
+﻿-- V1__init_schema.sql
+-- Extensions: uuid-ossp, vector
+-- Modules: users, refresh_tokens, health_profiles, family_groups, allergen_groups,
+--          family_members, family_member_allergies, units, ingredients,
+--          ingredient_aliases (vector(384) + HNSW index), ingredient_shelf_lives,
+--          ingredient_nutritions, pantry_batches (FEFO index), recipes,
+--          recipe_ingredients (LINEAR/SUBLINEAR/CEIL), recipe_steps,
+--          recommendation_logs, favorite_recipes, recipe_ratings,
+--          cooking_history, shopping_lists, shopping_list_items,
+--          device_tokens, notification_logs, idempotency_records, audit_logs
+-- All entities include: version BIGINT (optimistic lock), created_at / updated_at TIMESTAMPTZ

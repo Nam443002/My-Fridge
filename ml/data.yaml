@@ -1,0 +1,28 @@
+﻿# YOLO dataset config — ingredient detection
+train: ./data/train/images
+val:   ./data/val/images
+nc: 23
+names:
+  - thit_bo
+  - thit_lon
+  - uc_ga
+  - trung_ga
+  - dau_phu
+  - ca_chua
+  - bong_cai_xanh
+  - rau_muong
+  - ca_rot
+  - khoai_tay
+  - hanh_tay
+  - nam_kim_cham
+  - tom
+  - ca
+  - toi
+  - hanh_la
+  - ot
+  - nuoc_mam
+  - dau_an
+  - muoi
+  - bap_ngo
+  - dau_phong
+  - thom_dua

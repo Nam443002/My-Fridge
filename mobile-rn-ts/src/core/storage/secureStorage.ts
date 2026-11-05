@@ -1,0 +1,6 @@
+﻿// Keychain-backed secure storage for JWT tokens and sensitive preferences.
+export interface SecureStorage {
+  getItem(key: string): Promise<string | null>;
+  setItem(key: string, value: string): Promise<void>;
+  removeItem(key: string): Promise<void>;
+}

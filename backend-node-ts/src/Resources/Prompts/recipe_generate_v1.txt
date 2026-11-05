@@ -1,0 +1,5 @@
+﻿# System prompt template for Gemini recipe generation (UC-08)
+# Placeholders: {{target_servings}}, {{k_family}}, {{available_ingredients}},
+#               {{urgent_ingredients}}, {{excluded_allergens}}, {{dietary_preferences}}
+# Output: strict JSON matching recipe_draft.schema.json
+# IMPORTANT: Do NOT include calorie figures — backend Nutrition module computes ground truth.

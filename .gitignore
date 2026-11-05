@@ -1,0 +1,42 @@
+﻿# Secrets & Environment
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.keystore
+key.properties
+*service-account*.json
+firebase-adminsdk*.json
+
+# .NET artifacts (legacy)
+bin/
+obj/
+*.user
+
+# Node / React Native
+node_modules/
+.expo/
+dist/
+npm-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# ML weights & runs
+ml/weights/
+ml/runs/
+*.pt
+*.onnx
+
+# Docker volumes
+data/
+postgres-data/
+redis-data/
+minio-data/
+nginx-logs/
